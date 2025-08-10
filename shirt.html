@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MadMuscle - Shirts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>MadMuscle</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shirts.html">Shirts</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Our Shirts</h2>
+  <div class="product-list">
+    <div class="product">
+      <img src="images/Blackshirt.jpg" alt="Shirt 1">
+      <h3>MadMuscle Black Tee</h3>
+      <p>₹999</p>
+      <label>Size:
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+      </label>
+      <button onclick="addToCart('MadMuscle Black Tee', 999)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Blueshirt.jpg" alt="Shirt 2">
+      <h3>MadMuscle Blue Tee</h3>
+      <p>₹999</p>
+      <label>Size:
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+      </label>
+      <button onclick="addToCart('MadMuscle Blue Tee', 999)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Redshirt.jpg" alt="Shirt 3">
+      <h3>MadMuscle Red Tee</h3>
+      <p>₹1099</p>
+      <label>Size:
+        <select>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+      </label>
+      <button onclick="addToCart('MadMuscle Red Tee', 1099)">Add to Cart</button>
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

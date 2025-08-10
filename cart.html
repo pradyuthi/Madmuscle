@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MadMuscle Cart</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+  body {
+    background-color: grey;
+    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px 50px;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: white
+  }
+
+  .cart-page {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .cart-items {
+    flex: 2;
+  }
+
+  .cart-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 25px;
+    gap: 20px;
+  }
+
+  .cart-item img {
+    width: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .item-details {
+    flex: 1;
+  }
+
+  .item-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #111;
+  }
+
+  .item-size {
+    color: #777;
+    margin-bottom: 15px;
+  }
+
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .quantity-controls button {
+    background: #e0e0e0;
+    border: none;
+    font-weight: 700;
+    padding: 6px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #444;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
+  }
+  .quantity-controls button:hover {
+    background: #ccc;
+  }
+  .quantity-controls span {
+    font-weight: 700;
+    font-size: 1.1rem;
+    min-width: 30px;
+    text-align: center;
+  }
+
+  .remove-btn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 25px;
+  }
+  .remove-btn:hover {
+    background: #cc0000;
+  }
+
+  .item-price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #222;
+    width: 100px;
+    text-align: right;
+  }
+
+  /* Summary Section */
+  .summary {
+    flex: 1;
+    background: white;
+    border-radius: 14px;
+    padding: 30px 25px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 30px;
+  }
+
+  .summary h2 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #444;
+  }
+
+  .summary-row.total {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #111;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 20px;
+  }
+
+  .checkout-btn {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #0077ff;
+    color: black;
+    border: none;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .checkout-btn:hover {
+    background-color: #005fcc;
+  }
+
+  a.back-shop {
+    display: inline-block;
+    margin-top: 40px;
+    color: #0077ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  a.back-shop:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media(max-width: 900px) {
+    .cart-page {
+      flex-direction: column;
+    }
+    .summary {
+      position: relative;
+      top: auto;
+      margin-top: 40px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <h1>Your Cart</h1>
+  <div class="cart-page">
+    <div class="cart-items" id="cart-container">
+      <!-- Cart items injected by JS -->
+    </div>
+    <div class="summary">
+      <h2>Order Summary</h2>
+      <div class="summary-row">
+        <span>Items:</span>
+        <span id="summary-items">0</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total:</span>
+        <span id="summary-total">₹0</span>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-shop">← Continue Shopping</a>
+
+  <script src="cart-script.js"></script>
+  <script>
+    function checkout() {
+      alert("Checkout is not implemented yet.");
+    }
+  </script>
+</body>
+</html>

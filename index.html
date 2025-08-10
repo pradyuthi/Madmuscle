@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MadMuscle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="images/logo.jpg" alt="MadMuscle Logo" class="logo" />
+      <span class="brand-name">MadMuscle</span>
+    </div>
+    <a href="cart.html" class="cart" title="View Cart">
+      <span class="cart-icon">🛒</span>
+      <span class="cart-count" id="cart-count">0</span>
+    </a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="images/Background.jpg" alt="MadMuscle Hero Image" />
+    <div class="hero-text">
+      <h1>FOR THE KINGS OF THE GYM</h1>
+      <p>Style. Strength. MadMuscle.</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- PRODUCT SECTION -->
+  <section id="products" class="products">
+
+    <div class="product">
+      <img src="images/Blackshirt.jpg" alt="MadMuscle Shirt 1" />
+      <h2>Black Power Tee</h2>
+      <div class="size-options">
+        <span class="size-circle" onclick="selectSize(this, 'S')">S</span>
+        <span class="size-circle" onclick="selectSize(this, 'M')">M</span>
+        <span class="size-circle" onclick="selectSize(this, 'L')">L</span>
+      </div>
+      <button onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Blueshirt.jpg" alt="MadMuscle Shirt 2" />
+      <h2>Blue Classic Tee</h2>
+      <div class="size-options">
+        <span class="size-circle" onclick="selectSize(this, 'S')">S</span>
+        <span class="size-circle" onclick="selectSize(this, 'M')">M</span>
+        <span class="size-circle" onclick="selectSize(this, 'L')">L</span>
+      </div>
+      <button onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Redshirt.jpg" alt="MadMuscle Shirt 3" />
+      <h2>Red Muscle Tee</h2>
+      <div class="size-options">
+        <span class="size-circle" onclick="selectSize(this, 'S')">S</span>
+        <span class="size-circle" onclick="selectSize(this, 'M')">M</span>
+        <span class="size-circle" onclick="selectSize(this, 'L')">L</span>
+      </div>
+      <button onclick="addToCart(this)">Add to Cart</button>
+    </div>
+
+  </section>
+
+  <!-- Toast notification container -->
+  <div id="toast" class="toast"></div>
+<div id="cart-popup" class="cart-popup">
+  Item added to cart!
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section instagram">
+      <a href="https://www.instagram.com/madmusclee?igsh=MXhuYWJycmFyYjI0eA%3D%3D&utm_source=qr " target="_blank" rel="noopener noreferrer">
+        <img src="images/instagram_icon.png" alt="Instagram" class="footer-icon">
+        @madmusclee
+      </a>
+    </div>
+    <div class="footer-section contact-us">
+      <p>Contact us: <a href="mailto:madmusclee@gmail.com">madmusclee@gmail.com</a></p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

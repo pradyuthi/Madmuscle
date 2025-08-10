@@ -1,0 +1,265 @@
+/* GENERAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0e0e0e;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: black;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cart {
+  margin-left: auto;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.5rem;
+  user-select: none;
+  color: white;
+  text-decoration: none;
+}
+
+.cart-count {
+  background: red;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 2px 7px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-text p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ccc;
+}
+
+/* PRODUCTS SECTION */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.product {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.product img:hover {
+  transform: scale(1.05);
+}
+
+.product h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.product button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.product button:hover {
+  background: #ccc;
+}
+
+/* SIZE OPTIONS */
+.size-options {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.size-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  user-select: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.size-circle:hover {
+  background-color: white;
+  color: black;
+}
+
+.size-circle.selected {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+.cart-popup {
+  visibility: hidden; /* Hidden by default */
+  min-width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 15px;
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  font-size: 16px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.cart-popup.show {
+  visibility: visible;
+  opacity: 1;
+}
+.site-footer {
+  background-color: #222;
+  color: #eee;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-section a:hover {
+  color: #ff4081; /* example hover color */
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+}
